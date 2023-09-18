@@ -29,7 +29,7 @@ const Header=()=>{
 
 
 
-// RestaurantList is JSON Data for displaying cards
+
 
 
 
@@ -42,12 +42,13 @@ const RestaurantCard =(props)=>{
     //optimising our code more --> resdata?.data means optional chaining
 
     const {cloudinaryImageId,name,cuisines,avgRating,costForTwo,deliveryTime} = resData?.data
+   
     return(
 
         <div className="res-card">
 
              <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + 
-             resData.data.cloudinaryImageId}>
+                                              resData.data.cloudinaryImageId}>
 
             </img>
 
@@ -1895,12 +1896,9 @@ const Body=()=>{
                <div className="search"> Search</div>
                <div className="res-container">
 
-                     <RestaurantCard  resData = {resList[0]} />
-                      <RestaurantCard  resData = {resList[1]} />
-                       <RestaurantCard  resData = {resList[2]} />
-                        <RestaurantCard  resData = {resList[3]} />
-                         <RestaurantCard  resData = {resList[4]} />
-                        
+                   {
+                    resList.map(restaurant => <RestaurantCard  resData={restaurant}/>)
+                   }
                     
                     
 
