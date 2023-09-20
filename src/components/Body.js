@@ -6,7 +6,10 @@ const Body=()=>{
 
         <div className="body">
 
-               <div className="search"> Search</div>
+               <div className="filter "> 
+                   <button onClick={()=>{}} className="filter-btn"> Top Restaurant</button>
+               </div>
+
                <div className="res-container">
 
                    {
