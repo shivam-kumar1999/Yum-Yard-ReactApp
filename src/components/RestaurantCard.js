@@ -7,7 +7,7 @@ const RestaurantCard =(props)=>{
 
     //optimising our code more --> resdata?.data means optional chaining
 
-     const{cloudinaryImageId,name,cuisines,avgRating,costForTwo,deliveryTime} = resData;
+     const {cloudinaryImageId,name,cuisines,avgRating,costForTwo,deliveryTime} = resData;
    
     return(
 
